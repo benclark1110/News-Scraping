@@ -70,3 +70,25 @@ $(document).on("click", "#savenote", function() {
   $("#titleinput").val("");
   $("#bodyinput").val("");
 });
+
+$(document).on("click", "#deleteScrapes", function() {
+  $.ajax({
+    method: "DELETE",
+    url: "/delete"
+  })
+  .then(function() {
+    alert("Articles successfully deleted");
+    window.location.reload();
+  });
+});
+
+$(document).on("click", "#scrapeNewArticles", function() {
+  $.ajax({
+    method: "GET",
+    url: "/scrape"
+  })
+  .then(function() {
+    alert("Articles successfully scraped");
+    window.location.reload();
+  });
+});

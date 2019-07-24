@@ -2,12 +2,34 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Scraping With Mongoose</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Note Scraper</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <button class="nav-link">Home</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link">Saved Arcitles</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="scrapeNewArticles">Scrape New Articles!</button>
+              </li>
+              <li class="nav-item">
+                  <button class="nav-link" id="deleteScrapes">Clear Articles!</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
     <div id="wrapper">
-      <h1>Note Scraper</h1>
       <h2><i>Learn all you need to about web development!</i></h2>
       <div id="articles"></div>
       <div id="notes"></div>
